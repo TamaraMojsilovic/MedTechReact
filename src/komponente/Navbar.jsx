@@ -6,6 +6,7 @@ function Navbar() {
      
         <nav className="navbar navbar-dark bg-dark">
         < Link  to="/" className="navbar-brand">Pocetna</Link>
+        < Link  to="/pregledi" className="navbar-brand">Pregledi</Link>
  
 
    

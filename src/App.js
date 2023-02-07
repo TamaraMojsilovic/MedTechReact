@@ -5,6 +5,7 @@ import WelcomePage from './komponente/WelcomePage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import Pregledi from './komponente/Pregledi';
 function App() {
 
 
@@ -55,6 +56,7 @@ function App() {
       <Navbar  ></Navbar>
       <Routes>
         <Route path="/" element={ <WelcomePage></WelcomePage>}></Route>
+        <Route path="/pregledi" element={ <Pregledi pregledi={pregledi}></Pregledi>}></Route>
      
 
 
