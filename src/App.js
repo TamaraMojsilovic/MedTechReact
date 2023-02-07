@@ -18,6 +18,7 @@ function App() {
       cena:3500,
       doktor:"Jovanovic Branka",
       pacijent:"Budimir Ana",
+      obrisan:0, //ovo polje moze da ima vrednost 0 ili 1, kad obrisemo neki pregled vrednost ovog polja ce biti 1
 
     },
     {
@@ -26,6 +27,8 @@ function App() {
       cena: 150000,
       doktor:"Ana Markovic",
       pacijent:"Pera Peric",
+      obrisan:0,
+
 
     },
     {
@@ -34,6 +37,8 @@ function App() {
       cena:4000,
       doktor:"Jovanovic Milos",
       pacijent:"Marko Petrovic",
+      obrisan:0,
+
 
     },
     {
@@ -42,11 +47,17 @@ function App() {
       cena: 2400,
       doktor:"Jovanovic Branka",
       pacijent:"Budimir Ana",
+      obrisan:0,
+
 
     },
 
   ]);
-
+ 
+  function obrisi(id){
+      setPregledi(pregledi.filter( p=>p.id!=id))
+      console.log(pregledi)
+  }
 
   return (
     <div className="App">
@@ -56,7 +67,7 @@ function App() {
       <Navbar  ></Navbar>
       <Routes>
         <Route path="/" element={ <WelcomePage></WelcomePage>}></Route>
-        <Route path="/pregledi" element={ <Pregledi pregledi={pregledi}></Pregledi>}></Route>
+        <Route path="/pregledi" element={ <Pregledi pregledi={pregledi} obrisi={obrisi}></Pregledi>}></Route>
      
 
 

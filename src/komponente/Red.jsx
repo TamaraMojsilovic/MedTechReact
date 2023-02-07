@@ -1,9 +1,9 @@
  
  
-
+import { BsFillTrashFill } from 'react-icons/bs';
  
 
-const Red = ({pregled}) => {
+const Red = ({pregled,obrisi}) => {
  
 
 
@@ -18,7 +18,7 @@ const Red = ({pregled}) => {
                     <td>{pregled.doktor}</td>
                     <td>{pregled.pacijent}</td>
                     <td>{pregled.cena}</td>
-                    <td> </td>
+                    <td> <button type="button" className="btn btn-danger" onClick={()=>obrisi(pregled.id)}><BsFillTrashFill></BsFillTrashFill></button> </td>
                     </tr>
                 
                
