@@ -58,13 +58,34 @@ function App() {
       setPregledi(pregledi.filter( p=>p.id!=id))
       console.log(pregledi)
   }
-
+ 
+  function postaviFilter() {
+    console.log("A")
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("pretraga");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("table");
+    console.log(table);
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              console.log(tr[i])
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
   return (
     <div className="App">
       
       
       <BrowserRouter>
-      <Navbar  ></Navbar>
+      <Navbar postaviFilter={postaviFilter}  ></Navbar>
       <Routes>
         <Route path="/" element={ <WelcomePage></WelcomePage>}></Route>
         <Route path="/pregledi" element={ <Pregledi pregledi={pregledi} obrisi={obrisi}></Pregledi>}></Route>

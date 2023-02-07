@@ -1,4 +1,4 @@
-import { AiOutlinePlus } from 'react-icons/ai';
+ 
 import Red from "./Red";
 
  
@@ -14,7 +14,7 @@ const Pregledi = ({pregledi,obrisi}) => {
 
     return (
         <div className="pregledi">
-            <table className="table">
+            <table className="table" id="table">
                 <thead>
                     <tr>
                     <th scope="col">ID</th>
@@ -27,12 +27,11 @@ const Pregledi = ({pregledi,obrisi}) => {
                     </tr>
                 </thead>
                 <tbody>
-                     {pregledi.filter((p)=>p.obrisan===0)
-                     .map((p)=><Red key={p.id} pregled={p} obrisi={obrisi}></Red>)}
+                     {pregledi.map((p)=><Red key={p.id} pregled={p} obrisi={obrisi}></Red>)}
                 
                 </tbody>
                 </table>
-                <button type="button" className="btn btn-primary"> Dodaj novi pregled <AiOutlinePlus></AiOutlinePlus></button>
+                
         </div>
       
     )
