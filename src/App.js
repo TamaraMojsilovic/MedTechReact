@@ -18,7 +18,7 @@ function App() {
       cena:3500,
       doktor:"Jovanovic Branka",
       pacijent:"Budimir Ana",
-      obrisan:0, //ovo polje moze da ima vrednost 0 ili 1, kad obrisemo neki pregled vrednost ovog polja ce biti 1
+     
 
     },
     {
@@ -27,7 +27,7 @@ function App() {
       cena: 150000,
       doktor:"Ana Markovic",
       pacijent:"Pera Peric",
-      obrisan:0,
+     
 
 
     },
@@ -37,7 +37,7 @@ function App() {
       cena:4000,
       doktor:"Jovanovic Milos",
       pacijent:"Marko Petrovic",
-      obrisan:0,
+    
 
 
     },
@@ -47,7 +47,7 @@ function App() {
       cena: 2400,
       doktor:"Jovanovic Branka",
       pacijent:"Budimir Ana",
-      obrisan:0,
+     
 
 
     },
@@ -60,7 +60,7 @@ function App() {
   }
  
   function postaviFilter() {
-    console.log("A")
+ 
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("pretraga");
     filter = input.value.toUpperCase();
